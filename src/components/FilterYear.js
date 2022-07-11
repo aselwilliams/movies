@@ -1,15 +1,14 @@
-import {Component} from 'react'
+import React from "react";
 
-
-class FilterYear extends Component{
-    render(){
-        return(
-            <div>
-                <input className='form-control' placeholder='Type movie year...'
-                onChange={(event)=>this.props.setFilterYearValue(event.target.value)}/>
-
-            </div>
-        )
-    }
+function FilterYear({setFilterYearValue}) {
+  return (
+    <div>
+      <input
+        className="form-control"
+        placeholder="Type movie year..."
+        onChange={(event) => setFilterYearValue(event.target.value)}
+      />
+    </div>
+  );
 }
-export default FilterYear
+export default FilterYear;

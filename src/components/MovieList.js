@@ -1,20 +1,16 @@
-import {Component} from 'react'
-// import 'bootstrap/dist/css/bootstrap.min.css'
+import React from "react";
 import Movie from './Movie'
 
-class MovieList extends Component{
-
-    render(){
-        const {movies,btnClass,btnText,handleFavoritesClick,favourites}=this.props
-        return(
-            <>
-                {movies.map((movie, index)=>(
-                    <div className="col-md-3 mb-4">
-                       <Movie key={index} movie={movie} {...this.props} /> 
-                    </div>
-                ))}
-            </>
-        )
-    }
+function MovieList({ movies, btnClass, btnText, handleFavoritesClick }) {
+  return (
+    <>
+      {movies.map((movie, index) => (
+          <Movie movie={movie} key={index} btnClass={btnClass} btnText={btnText} handleFavoritesClick={handleFavoritesClick} />
+      ))}
+    </>
+  );
 }
-export default MovieList
+export default MovieList;
+
+
+

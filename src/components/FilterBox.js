@@ -1,17 +1,18 @@
-import { Component } from "react";
+import React from "react";
 
-class FilterBox extends Component{
-    render(){
-        return (
-            <div>
-                <select className="form-control ml-3" onChange={(event)=>this.props.setFilterValue(event.target.value)}>
-                    <option defaultValue={''}>Choose type</option>
-                    <option value='movie'>Movies</option>
-                    <option value='series'>Series</option>
-                    <option value='episodes'>Episodes</option>
-                </select>
-            </div>
-        )
-    }
+function FilterBox({ setFilterValue }) {
+  return (
+    <div>
+      <select
+        className="form-control ml-3"
+        onChange={(event) => setFilterValue(event.target.value)}
+      >
+        <option defaultValue={""}>Choose type</option>
+        <option value="movie">Movies</option>
+        <option value="series">Series</option>
+        <option value="episodes">Episodes</option>
+      </select>
+    </div>
+  );
 }
-export default FilterBox
+export default FilterBox;
